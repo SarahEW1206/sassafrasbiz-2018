@@ -1,18 +1,17 @@
-.container > div.flex-div {
-  display: flex;
-  justify-content: center;
+html, body {
+  height: 100%;
+  overflow: hidden;
 }
 
-html, body {
+body {
   box-sizing: border-box;
-  height: 100%;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 16px;
   letter-spacing: 1px;
   margin: 0px;
-  color: white;
-  background-color: lightblue;
-  background-image: url("marble-bg.jpg");
+  color: black;
+  background-color: lightgray;
+  background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/marble-bg.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -25,54 +24,59 @@ ul {
   list-style: none;
 }
 
+.container > div.flex-div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 .container {
-  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
   display: grid;
-  grid-gap: 0px;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto 40vh auto auto auto auto auto auto 30vh 300px 300px auto;
-  grid-template-areas: "l l l l l l l l l l l l" "h h h h h h h h h h h h" "m m m m m m m m m m m m" "a a a a a a a a a a a a" "b b b b b b b b b b b b" "s s s s s s s s s s s s" "t t t t t t t t t t t t" "u u u u u u u u u u u u" "x x x x x x x x x x x x" "o o o o o o o o o o o o" "y y y y y y y y y y y y" "f f f f f f f f f f f f";
+  grid-template-rows: auto auto auto 30vh auto auto 30vh auto auto auto 30vh auto auto auto;
 }
 
 @media (min-width: 768px) {
   .container {
-    grid-template-areas: "l l l l l l l l l l l l" "m m m m m m m m m m m m" "h h h h h h h h h h h h" "a a a a a a a b b b b b" "s s s s t t t t u u u u" "x x x x x x x x x x x x" "o o o o o o o o o o o o" "y y y y y y y y y y y y" "f f f f f f f f f f f f";
-    grid-template-rows: auto auto 40vh auto 50vh 30vh 300px 400px 600px;
+    grid-template-rows: auto auto auto 60vh 30vh 70vh 30vh 70vh 30vh auto auto;
   }
 }
 
 .logo {
-  grid-area: l;
-  background-color: #d181ff;
-}
-
-.logo-in-nav {
-  margin: 10px;
-  float: left;
+  grid-column: 1 / -1;
+  background-color: green;
+  padding: 20px 0px;
 }
 
 .menu {
-  grid-area: m;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Open Sans Condensed', sans-serif;
-  background-color: #f7a451;
+  grid-column: 1 / -1;
+  grid-row: 2 / span 1;
+  background-color: white;
+  color: black;
 }
 
-.menu > ul > li {
-  display: inline;
-  margin-right: 20px;
-  padding-top: 20px;
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-transform: capitalize;
+.menu > div {
+  max-width: 100px;
+  margin: 1em 2em;
+}
+
+.social-icons-bar {
+  grid-column: 1 / -1;
+  grid-row: 3 / span 1;
+  background-color: white;
 }
 
 .header {
-  grid-area: h;
-  background-color: rgba(0, 0, 0, 0.3) !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
   align-items: center;
+  grid-column: 1 / -1;
+  grid-row: 4 / span 1;
 }
 
 .headline {
@@ -84,100 +88,6 @@ ul {
   display: none;
   margin-left: -35px;
   line-height: 40px;
-}
-
-@keyframes Fade-In {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.headline-load {
-  animation: Fade-In 5s;
-  display: block;
-  position: relative;
-  z-index: 999;
-}
-
-.content-1 {
-  grid-area: a;
-  align-items: top !important;
-  background-color: #8ac5f5;
-}
-
-.content-2 {
-  grid-area: b;
-  background-color: #8ac5f5;
-}
-
-.service-1 {
-  grid-area: s;
-  background-color: #f1c6dd;
-  position: relative;
-  z-index: 200;
-}
-
-.service-2 {
-  grid-area: t;
-  background-color: #f1c6dd;
-  position: relative;
-  z-index: 200;
-}
-
-.service-3 {
-  grid-area: u;
-  background-color: #f1c6dd;
-  position: relative;
-  z-index: 200;
-}
-
-.transparent {
-  grid-area: x;
-  background-image: url("Asset 1.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  align-items: center;
-}
-
-.client-logos {
-  grid-area: o;
-  align-items: center;
-  background-color: #fcfb8a;
-  flex-wrap: wrap;
-  padding: 20px 0;
-  position: relative;
-  z-index: 200;
-}
-
-.client-logos > h1 {
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  color: #333;
-}
-
-.client-logos > img {
-  width: 70px;
-  padding: 10px 5%;
-}
-
-.transparent-2 {
-  grid-area: y;
-  background-image: url("typewriter.jpeg");
-  background-size: cover;
-  background-attachment: fixed;
-  align-items: center;
-}
-
-.footer {
-  grid-area: f;
-  align-items: center;
-  background-color: #6eff6e;
-  position: relative;
-  z-index: 200;
 }
 
 .circle {
@@ -204,12 +114,60 @@ ul {
   animation: Slide-In 5s;
 }
 
+@keyframes Fade-In {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.headline-load {
+  animation: Fade-In 5s;
+  display: block;
+  position: relative;
+  z-index: 999;
+}
+
+.content-1 {
+  grid-column: 1 / span 5;
+  grid-row: 5 / span 1;
+  align-items: top !important;
+  background-color: #8ac5f5;
+  text-align: left;
+}
+
+.content-2 {
+  grid-column: 6 / -1;
+  grid-row: 5 / span 1;
+  background-color: #8ac5f5;
+}
+
+.marquee-2 {
+  grid-column: 1 / -1;
+  grid-row: 6 / span 1;
+  background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/Asset 1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  align-items: center;
+}
+
 .animation-element {
   height: 200px;
   width: 200px;
+  border-radius: 100px;
   background-color: yellowgreen;
   opacity: 0;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.animation-element > h2 {
+  padding-top: 90px;
+  padding-left: 30px;
 }
 
 @keyframes Slide-Left {
@@ -226,12 +184,89 @@ ul {
   animation: Slide-Left 5s;
 }
 
-.paroller-scroller {
-  width: 100px;
-  height: 100px;
-  background-color: #8ac5f5;
-  margin-left: 2em;
+.service-1 {
+  grid-column: 1 / span 4;
+  grid-row: 7 / span 1;
+  background-color: #f1c6dd;
+  position: relative;
+  z-index: 200;
+}
+
+.service-2 {
+  grid-column: 5 / span 4;
+  grid-row: 7 / span 1;
+  background-color: #f1c6dd;
+  position: relative;
+  z-index: 200;
+}
+
+.service-3 {
+  grid-column: 9 / span 4;
+  grid-row: 7 / span 1;
+  background-color: #f1c6dd;
+  position: relative;
+  z-index: 200;
+}
+
+.marquee-3 {
+  grid-column: 1 / -1;
+  grid-row: 8 / span 1;
+  background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/typewriter.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  align-items: center;
+}
+
+.clients {
+  grid-column: 1 / -1;
+  grid-row: 9 / span 1;
+  background-color: #fcfb8a;
+  padding: 20px 0;
+  position: relative;
+  z-index: 200;
+}
+
+.clients > h1 {
+  width: 100%;
   text-align: center;
+  margin: 0;
+  color: #333;
+}
+
+.client-logos {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  margin-top: 2em;
+}
+
+.client-logos > div > img {
+  width: 70px;
+}
+
+.footer {
+  grid-column: 1 / -1;
+  grid-row: 11 / span 1;
+  align-items: center;
+  background-color: #6eff6e;
+  position: relative;
+  z-index: 200;
+}
+
+.paroller-scroller {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  background-color: yellowgreen;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.paroller-scroller > h2 {
+  padding-top: 90px;
+  padding-left: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
