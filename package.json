@@ -18,6 +18,12 @@
   ],
   "author": "Sarah Waldie",
   "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "lite-server": "^2.2.2"
+  },
   "bugs": {
     "url": "https://github.com/SarahEW1206/sassafrasbiz-2018/issues"
   },

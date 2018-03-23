@@ -1,11 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
-var browserSync = require('browser-sync')
-
-var reload = browserSync.reload;
-var nodemon = require('gulp-nodemon');
-
 
 var sassOptions = {
     errLogToConsole: true,
