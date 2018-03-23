@@ -1,0 +1,25 @@
+{
+  "name": "sbs-website-2018",
+  "version": "1.0.0",
+  "description": "new website for sassafras business services",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SarahEW1206/sassafrasbiz-2018.git"
+  },
+  "keywords": [
+    "web",
+    "development",
+    "marketing",
+    "website"
+  ],
+  "author": "Sarah Waldie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SarahEW1206/sassafrasbiz-2018/issues"
+  },
+  "homepage": "https://github.com/SarahEW1206/sassafrasbiz-2018#readme"
+}

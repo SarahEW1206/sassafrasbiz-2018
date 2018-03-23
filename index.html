@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>SBS Prototype</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="logo flex-div">
+            <img class="logo-in-nav" src="Images/SBS_Logo_New_white.png">
+        </div>
+
+        <div class="header flex-div">
+            <div class="circle">
+                <svg height="100" width="100">
+                    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="0" fill="pink" />
+                </svg>
+            </div>
+            <h1 class="headline">WELCOME TO WEB HAPPINESS!</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    Home
+                </li>
+                <li>
+                    About
+                </li>
+                <li>
+                    Services
+                </li>
+                <li>
+                    Work
+                </li>
+                <li>
+                    Contact
+                </li>
+            </ul>
+        </div>
+        <div class="content-1 flex-div">
+            <h1>WELCOME TO SASSAFRAS BUSINESS SERVICES</h1>
+        </div>
+        <div class="content-2 flex-div">
+            <p>Lorem ipsum dolor amet kickstarter austin gluten-free readymade echo park, before they sold out brooklyn single-origin
+                coffee gastropub. Readymade distillery sartorial ennui artisan beard banh mi shabby chic. Irony hashtag art
+                party, vice chambray live-edge deep v put a bird on it roof party VHS. Irony craft beer fam kickstarter celiac
+                typewriter neutra scenester XOXO deep v fixie keffiyeh trust fund activated charcoal. Deep v kinfolk whatever
+                lyft, slow-carb williamsburg meggings franzen lo-fi letterpress microdosing.</p>
+
+        </div>
+        <div class="service-1">
+            <h1>SERVICE 1</h1>
+            <p>Irony craft beer fam kickstarter celiac typewriter neutra scenester XOXO deep v fixie keffiyeh trust fund activated
+                charcoal. Deep v kinfolk whatever lyft, slow-carb williamsburg meggings franzen lo-fi letterpress microdosing</p>
+        </div>
+        <div class="service-2">
+            <h1>SERVICE 2</h1>
+            <p>Irony craft beer fam kickstarter celiac typewriter neutra scenester XOXO deep v fixie keffiyeh trust fund activated
+                charcoal. Deep v kinfolk whatever lyft, slow-carb williamsburg meggings franzen lo-fi letterpress microdosing</p>
+        </div>
+        <div class="service-3">
+            <h1>SERVICE 3</h1>
+            <p>Irony craft beer fam kickstarter celiac typewriter neutra scenester XOXO deep v fixie keffiyeh trust fund activated
+                charcoal. Deep v kinfolk whatever lyft, slow-carb williamsburg meggings franzen lo-fi letterpress microdosing</p>
+        </div>
+
+        <div class="transparent flex-div">
+            <div class="animation-element slide-left"></div>
+
+
+        </div>
+
+        <div class="client-logos flex-div">
+            <h1>Clients</h1>
+            <img src="Images/Logo1.png">
+            <img src="Images/Logo2.png">
+            <img src="Images/Logo3.png">
+            <img src="Images/Logo4.png">
+            <img src="Images/Logo5.png">
+            <img src="Images/Logo6.png">
+
+        </div>
+
+        <div class="transparent-2 flex-div">
+            <div class="paroller-scroller" data-paroller-factor="1.5" data-paroller-type="foreground" data-paroller-direction="vertical">I go up and down!</div>
+        </div>
+
+        <div class="footer flex-div">
+            <h1>FOOTER</h1>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap 4-->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script> -->
+    <!--Paroller-->
+    <script src="Scripts/jquery.paroller.js"></script>
+
+    <script>
+        $(function () {
+            $('[data-paroller-factor]').paroller();
+            $('.paroller').paroller({
+                factor: 0,
+                type: 'foreground'
+            });
+        });
+    </script>
+
+    <script src="Scripts/animations.js"></script>
+
+</body>
+
+</html>
