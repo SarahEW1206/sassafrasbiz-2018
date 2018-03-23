@@ -5,8 +5,11 @@ $(window).on("load", function () {
 })
 
 $(window).scroll(function () {
-    if ($(this).scrollTop() > 150) {
-        $('.animation-element').addClass("in-view");
+    if ($(this).scrollTop() > 300) {
+        $('.animation-element1').addClass("in-view");
+    }
+    if ($(this).scrollTop() > 1200) {
+        $('.animation-element2').addClass("in-view");
     }
 });
 

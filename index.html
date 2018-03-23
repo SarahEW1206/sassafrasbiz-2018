@@ -23,7 +23,7 @@
     <div class="container">
 
         <div class="logo flex-div">
-            <img src="Images/SBS_Logo_New_white.png">
+            <img class="logo-image" src="Images/SBS_LOGO_NEW.jpg">
         </div>
 
         <div class="menu flex-div">
@@ -34,16 +34,25 @@
         </div>
 
         <div class="social-icons-bar flex-div">
-            social media icons here
+            <img src="Images/facebook.png">
+            <img src="Images/linkedin.png">
+            <img src="Images/twitter.png">
+
         </div>
 
-        <div class="header flex-div">
-            <div class="circle">
-                <svg height="100" width="100">
-                    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="0" fill="pink" />
-                </svg>
+        <div class="marquee flex-div">
+            <div class="headline-div">
+                <h1 class="headline">WELCOME TO WEB HAPPINESS!</h1>
             </div>
-            <h1 class="headline">WELCOME TO WEB HAPPINESS!</h1>
+
+        </div>
+
+
+
+        <div class="circle flex-div">
+            <!-- <svg height="100" width="100">
+                    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="0" fill="pink" />
+                </svg> -->
         </div>
 
 
@@ -62,10 +71,9 @@
         </div>
 
         <div class="marquee-2 flex-div">
-            <div class="animation-element slide-left">
+            <div class="animation-element1 slide-left">
                 <h2>SERVICES</h2>
             </div>
-
 
         </div>
 
@@ -86,13 +94,13 @@
         </div>
 
         <div class="marquee-3 flex-div">
-            <div class="paroller-scroller" data-paroller-factor=".8" data-paroller-type="foreground" data-paroller-direction="vertical">
-                <h2>Clients</h2>
+            <div class="animation-element2 slide-left">
+                <h2>CLIENTS</h2>
             </div>
         </div>
 
         <div class="clients">
-            <h1>Clients</h1>
+            <h3>Select a logo to view work.</h3>
             <div class="client-logos">
                 <div>
                     <img src="Images/Logo1.png">
@@ -125,29 +133,35 @@
 
 
         <div class="footer flex-div">
-            <h1>FOOTER</h1>
+            <form method="POST" name="contactform" action="contact-form-handler.php">
+
+                <h1>Send me a message!</h1>
+                <p class="inputText">
+                    <label for='name'>Your Name:</label>
+                    <br>
+                    <input type="text" name="name">
+                </p>
+                <p class="inputText">
+                    <label for='email'>Email Address:</label>
+                    <br>
+                    <input type="text" name="email">
+                    <br>
+                </p>
+                <p class="inputText">
+                    <label for='message'>Message:</label>
+                    <br>
+                    <textarea name="message"></textarea>
+                </p>
+                <input id="submit" type="submit" value="Submit">
+                <br>
+            </form>
         </div>
+        <div class="footer-middle">HELLO</div>
+        <div class="footer-right">GOODBYE</div>
     </div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-    <!-- Bootstrap 4-->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script> -->
-    <!--Paroller-->
-    <script src="Scripts/jquery.paroller.js"></script>
-
-    <script>
-        $(function () {
-            $('[data-paroller-factor]').paroller();
-            $('.paroller').paroller({
-                factor: 0,
-                type: 'foreground'
-            });
-        });
-    </script>
 
     <script src="Scripts/animations.js"></script>
 
