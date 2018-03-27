@@ -7,20 +7,54 @@ html {
 
 body {
     box-sizing: border-box;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 16px;
-    letter-spacing: 1px;
     margin: 0px;
-    color: black;
-    background-color: black;
-    background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/marble-bg.jpg");
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: white;
+  }
 
+  a {
+      text-decoration: none;
+      color: #1fb26f;
   }
 
   h1, p {
       padding: 20px;
+  }
+
+  h1 {
+      font-size: 1.3em;
+      font-family: 'Open Sans Condensed', sans-serif;
+  }
+
+  h2 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+    padding-left: 20px;
+  }
+
+  p {
+    font-family: 'Heebo', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;    
+    color: #333333;
+    text-align: left;
+    line-height: 18px;
+  }
+
+
+  @media (min-width: 900px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+  }
+
+  .white-text-on-pic {
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,.8);
   }
 
 //   ul {
@@ -37,13 +71,29 @@ body {
     display: grid;
     // grid-gap: 3px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows:  auto auto auto 30vh auto  30vh auto auto auto 30vh auto auto auto;
+    grid-template-rows:  
+    auto //logo
+    auto //nav
+    auto //social
+    0vh //marquee-1
+    auto //intro
+    30vh //services marquee-2    
+    auto //service 1
+    auto //service 2
+    auto //service 3
+    30vh //clients marquee-3
+    auto //client logos
+    100vh //sample 1
+    100vh //sample 2
+    auto // footer left
+    auto //footer mid
+    auto; //footer right
 }
 
 @media(min-width: 900px) {
     .container {
 
-        grid-template-rows: auto auto auto 60vh 30vh 60vh 30vh 60vh 30vh auto ;
+        grid-template-rows: auto auto auto 0vh auto 60vh auto 60vh auto 100vh 100vh auto ;
     }
 }
 
@@ -68,12 +118,16 @@ body {
     grid-column: 1 / -1;
     grid-row: 2 / span 1;
     background-color: white;
-    color: black;
+    letter-spacing: 2px;
 }
 
 .menu > div {
-    max-width: 100px;
-    margin: 1em 2em;
+    max-width: 80px;
+    margin: 1em;
+}
+
+.menu a {
+    color: #333333;
 }
 
 .social-icons-bar {
@@ -87,74 +141,12 @@ body {
 }
 
 
-.marquee {
-    background-color: rgba(0,0,0,.1) !important;
-    grid-column: 1 / -1;
-    grid-row: 4 / span 1;
-    align-items: center;
-
-}
-
-
-
-.headline {
-    width: 100%;
-color: black;
-font-size: 2em;
-padding: 5px;
-font-family: 'Permanent Marker', sans-serif;
-letter-spacing: 10px;
-display: none;
-position: relative;
-padding-left: 10px;
-}
-
-.circle {
-
-    grid-column: 1 / -1;
-    grid-row: 4 / span 1; 
-    position: relative;
-    z-index: 11114;
-width: 100%;
-// height: 50px;
-background-color: rgba(254, 242, 6, 0.792);
-    position: relative;
-    z-index: 1;
-    opacity: 0;
-    left: 0%;
-    align-content: center;
-
-}
-
-@keyframes Slide-In {
-    0%   { left: -90%; }
-    100% { left: 0%; }
-  }
-.circle-load {
-    opacity: 1;
-    animation: Slide-In 5s;
-}
-
-@keyframes Fade-In {
-    0%   { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-.headline-load {
-    animation: Fade-In 7s;
-    display: block;
-    position: relative;
-    z-index: 999;
-}
-
-
-
 .content-1 {
     grid-column: 1 / span 5;
     grid-row: 5 / span 1;
     align-items: top !important;
     background-color: white;
-    text-align: left;
+    text-align: right;
 
 }
 
@@ -162,6 +154,17 @@ background-color: rgba(254, 242, 6, 0.792);
     grid-column: 6 / -1;
     grid-row: 5 / span 1;
     background-color: white;
+    text-align: justify;
+}
+
+@media (min-width: 900px) {
+    .content-1 {
+    grid-column: 3 / span 3;
+    }
+
+    .content-2 {
+    grid-column: 6 / -3;  
+    }
 }
 
 .marquee-2 {
@@ -215,7 +218,7 @@ background-color: rgba(254, 242, 6, 0.792);
 
 .in-view {
     opacity: 1;
-    animation: Slide-Left 5s;
+    animation: Slide-Left 3s;
 }
 
 .service-1 {
@@ -258,9 +261,6 @@ background-color: rgba(254, 242, 6, 0.792);
     grid-column: 9 / span 4;
     grid-row: 7 / span 1;
     }
-
-
-
 }
 
 .marquee-3 {
@@ -312,26 +312,106 @@ background-color: rgba(254, 242, 6, 0.792);
     margin-top: 40px;
 }
 
-.client-logos > div > img {
+.client-logos > div > a > img {
     width: 80px;
     padding: 15px;
 }
 
 @media(min-width: 900px) {
     .client-logos {
-        margin-top: 9vh;
+        margin: 60px 0;
     }
 
-    .client-logos > div > img {
-        width: 70px;
+    .client-logos > div > a > img {
+        width: 90px;
+        padding: 25px;
+
+    }
+}
+
+.work-sample {
+    padding-bottom: 40px;
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.work-sample-internal {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    max-width: 1080px;
+    height: auto;
+}
+
+.work-sample-internal > h3 {
+    color: #333333;
+    border-bottom: 1px solid white;
+}
+
+.work-sample-internal > p {
+    color: #333333;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+.work-sample-internal > a {
+    color: #333333;
+}
+
+.web-sample-image {
+    display: block;
+    object-fit: contain;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+        // max-height: 100%;
+}
+
+.sample-1 {
+    grid-column: 1 / -1;
+    grid-row: 12 / span 1;
+    background-color: #ffe0df;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.sample-2 {
+    grid-column: 1 / -1;
+    grid-row: 13 / span 1;
+    background-color: #fca232;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
+@media(min-width: 900px) {
+    .sample-1 {
+        grid-column: 1 / -1;
+        grid-row: 10 / span 1;
+    }
+
+    .sample-2 {
+        grid-column: 1 / -1;
+        grid-row: 11 / span 1;
     }
 }
 
 
 
-.footer {
+
+.footer-left {
     grid-column: 1 / -1;
-    grid-row: 12 / span 1;
+    grid-row: 14 / span 1;
+    align-items: center;
+    background-color: #1fb26f;
+    position: relative;
+    z-index: 200;
+    padding: 20px;
+    background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/sarah-mobile-flip.jpg");
+    background-size: cover;
+}
+
+.footer-middle {
+    grid-column: 1 / -1;
+    grid-row: 15 / span 1;
     align-items: center;
     background-color: #1fb26f;
     position: relative;
@@ -339,14 +419,37 @@ background-color: rgba(254, 242, 6, 0.792);
     padding: 20px;
 }
 
+.footer-right {
+    grid-column: 1 / -1;
+    grid-row: 16 / span 1;
+    align-items: center;
+    background-color: #1fb26f;
+    position: relative;
+    z-index: 200;
+    padding: 20px;
+}
+
+
 @media(min-width: 900px) {
-    .footer {
-        grid-row: 10 / span 1;
+    .footer-left {
+    grid-column: 1 / span 4;
+    grid-row: 12 / span 1;
+    background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/sarah-900-flip.jpg");
+    }
+
+    .footer-middle {
+        grid-column: 5 / span 4;
+        grid-row: 12 / span 1;
+        }
+
+    .footer-right {
+    grid-column: 9 / span 4;
+    grid-row: 12 / span 1;
     }
 }
 
 form {
-    width: 30%;
+    width: 90%;
 }
 
 input {
@@ -369,7 +472,7 @@ textarea {
 	width: 25%;
 	background-color: white;
 	border: none;
-	font-family: 'Montserrat', sans-serif;
+    font-family: 'Heebo', sans-serif;    
     padding: 8px;
     margin-left: 20px;
 }
@@ -386,29 +489,32 @@ p.inputText {
 label {
 color: white;
 margin: 0;
+font-family: 'Heebo', sans-serif;
+font-size: 16px;
 
 }
 
+.sticky-nav {
+    display: none;    
+}
 
+.show-sticky-nav {
+    display: block;
+    position: fixed;
+    z-index: 999999;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    color: #1fb26f;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #1fb26f;
+}
 
+.show-sticky-nav > div {
+    max-width: 80px;
+    margin: 1em;
+}
 
-
-
-// .paroller-scroller {
-//     height: 200px;
-//     width: 200px;
-//     border-radius: 100px;
-//     background-color: yellowgreen;
-//     position: relative;
-//     display: flex;
-//     justify-content: center;
-//     align-content: center;
-// }
-
-// .paroller-scroller > h2 {
-//     padding-top: 90px;
-//     padding-left: 30px;
-// }
 
 
 
