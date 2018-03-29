@@ -22,12 +22,14 @@ body {
 
   h1 {
       font-size: 1.3em;
-      font-family: 'Open Sans Condensed', sans-serif;
+      font-family: 'Roboto', sans-serif;
+
       margin: 0;
   }
 
   h2 {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
     color: white;
     padding-left: 20px;
   }
@@ -38,7 +40,7 @@ body {
     // letter-spacing: 1px;   
     font-weight: 400; 
     color: #333333;
-    text-align: justify;
+    text-align: left;
     line-height: 20px;
     margin: 0;
   }
@@ -46,12 +48,12 @@ body {
 
   @media (min-width: 900px) {
     h1 {
-        font-size: 1.8em;
+        font-size: 2.3em;
     }
 
     p {
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 20px;
+        line-height: 28px;
     }
   }
 
@@ -83,9 +85,9 @@ body {
     auto //service 3
     minmax(230px, 30vh) //clients marquee-3
     auto //client logos
-    100vh //sample 1
-    100vh //sample 2
-    100vh //sample 2
+    auto //sample 1
+    auto //sample 2
+    auto //sample 2
     auto // footer left
     auto //footer mid
     auto; //footer right
@@ -94,7 +96,11 @@ body {
 @media(min-width: 900px) {
     .container {
 
-        grid-template-rows: auto auto auto 40vh auto  minmax(230px, 60vh) auto  minmax(230px, 60vh) auto 100vh 100vh 100vh 100vh ;
+        // grid-template-rows: auto auto auto 40vh auto  minmax(230px, 60vh) auto  minmax(230px, 60vh) auto 100vh 100vh 100vh 100vh ;
+
+        grid-template-rows: auto auto auto 70vh 100vh minmax(230px, 80vh) 100vh  minmax(230px, 80vh) auto 100vh 100vh 100vh 100vh ;
+
+
     }
 }
 
@@ -128,7 +134,8 @@ body {
 .social-icons-bar {
     grid-column: 1 / -1;
     grid-row: 3 / span 1;
-    background-color: #1fb26f;
+    // background-color: #1fb26f;
+    background-color: #333333; 
 }
 
 .social-icons-bar > img {
@@ -138,11 +145,22 @@ body {
 .marquee-1 {
     grid-column: 1 / -1;
     grid-row: 4 / span 1;
-    background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/marble-bg.jpg");
+    background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/paulette-wooten-223048-unsplash.jpg");
     background-size: cover;
     background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-    
+ 
+.headline-span {
+    font-size: 5em;
+    color: white;
+    padding: 20px;
+    font-weight: 800;
+    line-height: 80px;
+}
+
 
 .content-1 {
     grid-column: 1 / span 5;
@@ -151,6 +169,7 @@ body {
     background-color: white;
     text-align: right;
     padding: 20px 0 0 0;
+    align-items: center;
 
 }
 
@@ -160,6 +179,7 @@ body {
     background-color: white;
     text-align: justify;
     padding: 20px;
+    align-items: center;
 }
 
 @media (min-width: 900px) {
@@ -175,7 +195,7 @@ body {
 .marquee-2 {
     grid-column: 1 / -1;
     grid-row: 6 / span 1;
-    background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/Asset 1.jpg");
+    background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/javier-ramos-421849-unsplash.jpg");
     background-size: cover;
     background-attachment: fixed;
     align-items: center;
@@ -232,10 +252,10 @@ body {
     background-color: white;
     position: relative;
     z-index: 200;
-    padding: 20px;
-    border: 1px solid #888888;
-    margin: 1em;
-    border-radius: 10px;
+    padding: 60px 20px;
+    // border: 1px solid #888888;
+    // margin: 1em;
+    // border-radius: 10px;
 }
 
 
@@ -245,10 +265,10 @@ body {
     background-color: white;
     position: relative;
     z-index: 200;
-    padding: 20px;
-    border: 1px solid #888888;
-    margin: 1em;
-    border-radius: 10px;
+    padding: 60px 20px;
+    // border: 1px solid #888888;
+    // margin: 1em;
+    // border-radius: 10px;
 }
 
 .service-3 {
@@ -257,10 +277,10 @@ body {
     background-color: white;
     position: relative;
     z-index: 200;
-    padding: 20px;
-    border: 1px solid #888888;
-    margin: 1em;
-    border-radius: 10px;
+    padding: 60px 20px;
+    // border: 1px solid #888888;
+    // margin: 1em;
+    // border-radius: 10px;
 }
 
 @media(min-width: 900px) {
@@ -283,7 +303,7 @@ body {
 .marquee-3 {
     grid-column: 1 / -1;
     grid-row: 10 / span 1;
-    background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/typewriter.jpeg");
+    background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/abstract-action-animal-305197.jpg");
     background-size: cover;
     background-attachment: fixed;
     align-items: center;
@@ -301,7 +321,7 @@ body {
     
     grid-column: 1 / -1;
     grid-row: 11 / span 1;
-    background-color: black;
+    background-color: #333333;
     padding: 20px 0;
     position: relative;
     z-index: 200;
@@ -315,7 +335,7 @@ body {
 
 .clients > p {
     display: block;
-    width: 100%;
+    width: 90%;
     text-align: center;
     margin: 0;
     color: white;
@@ -363,32 +383,34 @@ body {
 }
 
 .work-sample {
-    padding-bottom: 40px;
-    padding-top: 40px;
+    // padding-bottom: 40px;
+    // padding-top: 40px;
     display: flex;
     align-items: center;
 
 }
 
 .work-sample-internal {
-    width: 80%;
+    width: 90%;
     display: block;
     margin: 0 auto;
     max-width: 1080px;
     height: auto;
-    background-color: black;
-    padding: 20px;
+    background-color: #333333;
+    padding: 60px 20px;
+    box-shadow: 2px 2px 2px #333333;
 }
 
 .work-sample-internal > h3 {
-    color: #888888;
+    color: whitesmoke;
     border-bottom: 1px solid #888888;
 }
 
 .work-sample-internal > p {
-    color: #888888;
+    color: whitesmoke;
     padding-left: 0px;
     margin-left: 0px;
+    font-weight: 100;
 }
 
 .work-sample-internal > a {
@@ -427,9 +449,9 @@ body {
 }
 
 .sample-1 {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    // position: -webkit-sticky;
+    // position: sticky;
+    // top: 0;
     grid-column: 1 / -1;
     grid-row: 12 / span 1;
     background-color: #ffe0df;
@@ -437,9 +459,9 @@ body {
 }
 
 .sample-2 {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    // position: -webkit-sticky;
+    // position: sticky;
+    // top: 0;
     grid-column: 1 / -1;
     grid-row: 13 / span 1;
     background-color: #fca232;
@@ -447,9 +469,9 @@ body {
 }
 
 .sample-3 {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
+    // position: -webkit-sticky;
+    // position: sticky;
+    // top: 0px;
     grid-column: 1 / -1;
     grid-row: 14 / span 1;
     background-color: #ffffff;
