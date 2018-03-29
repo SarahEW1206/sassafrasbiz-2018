@@ -1,12 +1,22 @@
-$(window).on("load", function () {
-    $('.animation-element1').addClass("in-view");
-})
+var i = 0;
+var txt = 'Web design with a smile! :)'; /* The text */
+var speed = 100; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+    if (i < txt.length) {
+        document.getElementById("headline-text").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+};
+
+window.onload = typeWriter;
 
 $(window).scroll(function () {
-    // if ($(this).scrollTop() > 100) {
-    //     $('.animation-element1').addClass("in-view");
-    // }
-    if ($(this).scrollTop() > 700) {
+    if ($(this).scrollTop() > 500) {
+        $('.animation-element1').addClass("in-view");
+    }
+    if ($(this).scrollTop() > 1000) {
         $('.animation-element2').addClass("in-view");
     }
 
@@ -29,6 +39,9 @@ $('a[href^="#"]').click(function () {
 
     return false;
 });
+
+
+
 
 $(window).resize(function () { location.reload(); });
 

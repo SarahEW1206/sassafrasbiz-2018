@@ -79,15 +79,15 @@ body {
     auto //social
     40vh //marquee-1
     auto //intro
-    minmax(230px, 30vh) //services marquee-2    
+    minmax(400px, 30vh) //services marquee-2    
     auto //service 1
     auto //service 2
     auto //service 3
-    minmax(230px, 30vh) //clients marquee-3
+    minmax(400px, 30vh) //clients marquee-3
     auto //client logos
-    auto //sample 1
-    auto //sample 2
-    auto //sample 2
+    70vh //sample 1
+    70vh //sample 2
+    70vh //sample 3
     auto // footer left
     auto //footer mid
     auto; //footer right
@@ -153,7 +153,7 @@ body {
     justify-content: center;
 }
  
-.headline-span {
+#headline-text {
     font-size: 5em;
     color: white;
     padding: 20px;
@@ -397,7 +397,7 @@ body {
     max-width: 1080px;
     height: auto;
     background-color: #333333;
-    padding: 60px 20px;
+    padding: 20px;
     box-shadow: 2px 2px 2px #333333;
 }
 
