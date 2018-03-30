@@ -85,9 +85,9 @@ body {
     auto //service 3
     minmax(400px, 30vh) //clients marquee-3
     auto //client logos
-    70vh //sample 1
-    70vh //sample 2
-    70vh //sample 3
+    80vh //sample 1
+    80vh //sample 2
+    80vh //sample 3
     auto // footer left
     auto //footer mid
     auto; //footer right
@@ -395,7 +395,7 @@ body {
     display: block;
     margin: 0 auto;
     max-width: 1080px;
-    height: auto;
+    height: 90%;
     background-color: #333333;
     padding: 20px;
     box-shadow: 2px 2px 2px #333333;
