@@ -1,3 +1,4 @@
+//typewriter effect on marquee.
 var i = 0;
 var txt = 'Web design with a smile! :)'; /* The text */
 var speed = 100; /* The speed/duration of the effect in milliseconds */
@@ -13,11 +14,29 @@ function typeWriter() {
 window.onload = typeWriter;
 
 $(window).scroll(function () {
-    if ($(this).scrollTop() > 500) {
-        $('.animation-element1').addClass("in-view");
+    var h = window.innerHeight;
+    var top1 = h + h - 100;
+    var top1remove = h + (h / 4);
+    var top2 = h + h + h + h - 300;
+    var top2remove = h + h + h;
+
+    console.log(top);
+
+    if ($(this).scrollTop() > top1) {
+        $('.overlay1').addClass("scale-and-skew");
     }
-    if ($(this).scrollTop() > 1000) {
-        $('.animation-element2').addClass("in-view");
+
+    if ($(this).scrollTop() < top1remove) {
+        $('.overlay1').removeClass("scale-and-skew");
+    }
+
+    if ($(this).scrollTop() > top2) {
+        $('.overlay1').removeClass("scale-and-skew");
+        $('.overlay2').addClass("scale-and-skew");
+    }
+
+    if ($(this).scrollTop() < top2remove) {
+        $('.overlay2').removeClass("scale-and-skew");
     }
 
     if ($(this).scrollTop() > 159) {
@@ -30,6 +49,8 @@ $(window).scroll(function () {
 
 });
 
+//Smooth scroll instead of jumping to anchor links.
+
 var $root = $('html, body');
 
 $('a[href^="#"]').click(function () {
@@ -39,6 +60,8 @@ $('a[href^="#"]').click(function () {
 
     return false;
 });
+
+
 
 
 
