@@ -13,7 +13,13 @@ function typeWriter() {
 
 window.onload = typeWriter;
 
+
+
+
 $(window).scroll(function () {
+
+    //activate section header animations when the div is in the middle of the viewing window.
+
     var h = window.innerHeight;
     var top1 = h + h - 100;
     var top1remove = h + (h / 4);
@@ -38,6 +44,8 @@ $(window).scroll(function () {
     if ($(this).scrollTop() < top2remove) {
         $('.overlay2').removeClass("scale-and-skew");
     }
+
+    //activate sticky nav when static nav moves off the top of the scroll area and stick it to the top. 
 
     if ($(this).scrollTop() > 159) {
         $('.sticky-nav').addClass("show-sticky-nav flex-div")

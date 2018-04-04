@@ -30,7 +30,11 @@ h1 {
 
 h1.overlay {
   font-size: 5em;
-  color: #1fb26f;
+  color: yellow;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 55px;
+  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
 }
 
 @keyframes scaleUp {
@@ -44,7 +48,7 @@ h1.overlay {
 
 @media (min-width: 900px) {
   .scale-and-skew {
-    animation: scaleUp 8s ease forwards;
+    animation: scaleUp 4s ease forwards;
   }
 }
 
@@ -167,7 +171,7 @@ p {
 .marquee-1 {
   grid-column: 1 / -1;
   grid-row: 4 / span 1;
-  background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/paulette-wooten-223048-unsplash.jpg");
+  background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/greenchair.jpg");
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -215,7 +219,7 @@ p {
 .marquee-2 {
   grid-column: 1 / -1;
   grid-row: 6 / span 1;
-  background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/javier-ramos-421849-unsplash.jpg");
+  background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/freemanalley.jpg");
   background-size: cover;
   background-attachment: fixed;
   align-items: center;
@@ -314,7 +318,7 @@ p {
 .marquee-3 {
   grid-column: 1 / -1;
   grid-row: 10 / span 1;
-  background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/abstract-action-animal-305197.jpg");
+  background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/shutters.jpg");
   background-size: cover;
   background-attachment: fixed;
   align-items: center;
