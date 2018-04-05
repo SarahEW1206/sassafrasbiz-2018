@@ -87,6 +87,12 @@ body {
         color: white;
         padding-left: 20px;
       }
+
+      h3 {
+        font-family: 'Roboto', sans-serif;
+    
+        color: white;
+      }
     
       p {
         font-family: 'Heebo', sans-serif;
@@ -141,11 +147,11 @@ body {
         auto 
         50vh 
         auto 
-        minmax(400px, 30vh)  
+        minmax(400px, 28vh)  
         auto 
         auto 
         auto 
-        minmax(400px, 30vh) 
+        minmax(400px, 28vh) 
         auto 
         auto 
         auto 
@@ -306,7 +312,7 @@ body {
     and (-webkit-device-pixel-ratio : 3) { 
     .marquee-1 {
       background-image: url("https://sassafrasbiz.com/new-site/Images/greenchair.jpg");
-    background-size: contain;
+      background-attachment: scroll;
     }
     }
      
@@ -386,8 +392,7 @@ body {
     and (-webkit-device-pixel-ratio : 3) { 
     .marquee-2 {
       background-image: url("https://sassafrasbiz.com/new-site/Images/freemanalley.jpg");
-    background-size: contain;
-    }
+      background-attachment: scroll;    }
     }
     
     .animation-element1 {
@@ -546,8 +551,7 @@ body {
     and (-webkit-device-pixel-ratio : 3) { 
     .marquee-3 {
       background-image: url("https://sassafrasbiz.com/new-site/Images/shutters.jpg");
-    background-size: contain;
-    }
+      background-attachment: scroll;    }
     }
     
     @media(min-width: 1126px) {
@@ -846,7 +850,6 @@ body {
         position: relative;
         z-index: 200;
         padding: 20px;
-        // background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/sarah-mobile-flip.jpg");
         background-image: url("https://sassafrasbiz.com/new-site/Images/sarah-mobile-flip.jpg");
         background-size: cover;
         h2 {
@@ -860,8 +863,7 @@ body {
     and (-webkit-device-pixel-ratio : 3) { 
     .footer-left {
       background-image: url("https://sassafrasbiz.com/new-site/Images/sarah-mobile-flip.jpg");
-  background-repeat: no-repeat;
-    background-size: auto;
+      background-attachment: scroll;
     }
     }
     
