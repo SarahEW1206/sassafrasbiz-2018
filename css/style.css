@@ -17,9 +17,17 @@ body {
 a {
   text-decoration: none;
   color: #1fb26f;
+  font-family: 'Heebo', sans-serif;
 }
 
-h1, p {
+p {
+  font-family: 'Heebo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+  text-align: left;
+  line-height: 22px;
+  margin: 0;
   padding: 15px;
 }
 
@@ -27,6 +35,34 @@ h1 {
   font-size: 1.3em;
   font-family: 'Roboto', sans-serif;
   margin: 0;
+  padding: 15px;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  padding-left: 20px;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+ul {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+@media (min-width: 1126px) {
+  h1 {
+    font-size: 2.3em;
+  }
+  p {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 
 h1.overlay {
@@ -74,37 +110,6 @@ h1.overlay {
   }
 }
 
-h2 {
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  padding-left: 20px;
-}
-
-h3 {
-  font-family: 'Roboto', sans-serif;
-  color: white;
-}
-
-p {
-  font-family: 'Heebo', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #333333;
-  text-align: left;
-  line-height: 22px;
-  margin: 0;
-}
-
-@media (min-width: 1126px) {
-  h1 {
-    font-size: 2.3em;
-  }
-  p {
-    font-size: 20px;
-    line-height: 28px;
-  }
-}
-
 .white-text-on-pic {
   color: white;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
@@ -120,6 +125,15 @@ p {
   justify-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
+}
+
+@supports (display: -webkit-box) {
+  .container > div.flex-div {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-content: center;
+  }
 }
 
 .container {
@@ -146,16 +160,9 @@ p {
 }
 
 .logo-image {
-  width: 60%;
   padding: 10px 0px;
   -o-object-fit: contain;
   object-fit: contain;
-}
-
-@media (min-width: 1126px) {
-  .logo-image {
-    width: 150px;
-  }
 }
 
 .menu {
@@ -171,7 +178,7 @@ p {
 
 .menu > div {
   margin: .5em;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .menu a {
@@ -192,18 +199,14 @@ p {
   color: #1fb26f;
   letter-spacing: 1px;
   border-bottom: 1px solid #1fb26f;
-  font-size: 20px;
 }
 
 .show-sticky-nav > div {
-  margin: .3em;
-  font-size: 20px;
+  margin: .5em;
+  font-size: 14px;
 }
 
 @media (min-width: 1126px) {
-  .show-sticky-nav > div {
-    margin: 1em;
-  }
   .sticky-nav, .menu {
     letter-spacing: 2px;
   }
@@ -222,8 +225,8 @@ p {
   align-items: center;
 }
 
-.social-icons-bar > a {
-  margin: .25em 1em .1em 1em;
+.social-icons-bar > a > img {
+  margin: 5px 5px 1px 5px;
 }
 
 .marquee-1 {
@@ -254,6 +257,20 @@ p {
   }
 }
 
+@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+  .marquee-1 {
+    background-image: url("https://sassafrasbiz.com/new-site/Images/greenchair.jpg");
+    background-attachment: scroll;
+  }
+}
+
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+  .marquee-1 {
+    background-image: url("https://sassafrasbiz.com/new-site/Images/greenchair.jpg");
+    background-attachment: scroll;
+  }
+}
+
 #headline-text {
   font-size: 5em;
   color: white;
@@ -278,6 +295,10 @@ p {
   padding: 20px 0 0 0;
 }
 
+.content-1 h1 {
+  width: 90%;
+}
+
 .content-2 {
   -ms-grid-column: 6;
   -ms-grid-column-span: 6;
@@ -293,14 +314,20 @@ p {
   align-items: center;
 }
 
+.content-2 p {
+  width: 100%;
+}
+
 @media (min-width: 1126px) {
   .content-1 {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 3;
-    grid-column: 3 / span 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-column: 2 / span 4;
   }
   .content-2 {
-    grid-column: 6 / -3;
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 4;
+    grid-column: 6 / -2;
   }
 }
 
@@ -311,6 +338,7 @@ p {
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
   grid-row: 6 / span 1;
+  background-color: #3390d2;
   background-image: url("https://sassafrasbiz.com/new-site/Images/freemanalley.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -323,75 +351,32 @@ p {
   .marquee-2 {
     background-image: url("https://sassafrasbiz.com/new-site/Images/freemanalley.jpg");
     background-attachment: scroll;
+    height: 300px;
   }
 }
 
-.animation-element1 {
-  height: 200px;
-  width: 200px;
-  border-radius: 100px;
-  background-color: #1fb26f;
-  opacity: 0;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-}
-
-.animation-element1 > h2 {
-  padding-top: 90px;
-  padding-left: 30px;
-}
-
-.animation-element2 {
-  height: 200px;
-  width: 200px;
-  border-radius: 100px;
-  background-color: #1fb26f;
-  opacity: 0;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-}
-
-.animation-element2 > h2 {
-  padding-top: 90px;
-  padding-left: 30px;
-}
-
-@-webkit-keyframes Slide-Left {
-  0% {
-    left: -90%;
-  }
-  100% {
-    left: 0%;
+@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+  .marquee-2 {
+    background-image: url("https://sassafrasbiz.com/new-site/Images/freemanalley.jpg");
+    background-attachment: scroll;
+    height: 300px;
   }
 }
 
-@keyframes Slide-Left {
-  0% {
-    left: -90%;
-  }
-  100% {
-    left: 0%;
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+  .marquee-2 {
+    background-image: url("https://sassafrasbiz.com/new-site/Images/freemanalley.jpg");
+    background-attachment: scroll;
+    height: 300px;
   }
 }
 
-.in-view {
-  opacity: 1;
-  -webkit-animation: Slide-Left 3s;
-  animation: Slide-Left 3s;
+@media only screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) {
+  .marquee-2 {
+    background-image: url("https://sassafrasbiz.com/new-site/Images/freemanalley.jpg");
+    background-attachment: scroll;
+    height: 300px;
+  }
 }
 
 .service-1 {
@@ -482,6 +467,31 @@ p {
   .marquee-3 {
     background-image: url("https://sassafrasbiz.com/new-site/Images/shutters.jpg");
     background-attachment: scroll;
+    height: 300px;
+  }
+}
+
+@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+  .marquee-3 {
+    background-image: url("https://sassafrasbiz.com/new-site/Images/shutters.jpg");
+    background-attachment: scroll;
+    height: 300px;
+  }
+}
+
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+  .marquee-3 {
+    background-image: url("https://sassafrasbiz.com/new-site/Images/shutters.jpg");
+    background-attachment: scroll;
+    height: 300px;
+  }
+}
+
+@media only screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) {
+  .marquee-3 {
+    background-image: url("https://sassafrasbiz.com/new-site/Images/shutters.jpg");
+    background-attachment: scroll;
+    height: 300px;
   }
 }
 
@@ -527,21 +537,28 @@ p {
 .to-center-logos {
   display: block;
   margin: 40px auto 0 auto;
+  width: 90%;
   max-width: 1080px;
 }
 
 .client-logos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: inline;
+}
+
+@supports (flex-wrap: wrap) {
+  .client-logos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
 }
 
 .client-logos > div > a > img {
