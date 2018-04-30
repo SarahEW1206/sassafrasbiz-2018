@@ -1,7 +1,7 @@
 //typewriter effect on marquee.
 var i = 0;
-var txt = 'Web design with a smile! :)'; /* The text */
-var speed = 100; /* The speed/duration of the effect in milliseconds */
+var txt = 'You run your business. I\'ve got this. :) '; /* The text */
+var speed = 150; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
     if (i < txt.length) {

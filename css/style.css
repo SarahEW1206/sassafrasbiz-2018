@@ -236,8 +236,9 @@ h1.overlay {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4 / span 1;
-  background-image: url("https://sassafrasbiz.com/new-site/Images/greenchair.jpg");
+  background-image: url("/Users/sarahwaldie/Desktop/SBS-website-2018/Images/typing.jpg");
   background-size: cover;
+  background-position: 50% 50%;
   background-attachment: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -290,13 +291,9 @@ h1.overlay {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: white;
+  background-color: #1fb26f;
   text-align: right;
   padding: 20px 0 0 0;
-}
-
-.content-1 h1 {
-  width: 90%;
 }
 
 .content-2 {
@@ -312,6 +309,11 @@ h1.overlay {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.round-headshot {
+  width: 200px;
+  border-radius: 100px;
 }
 
 .content-2 p {
