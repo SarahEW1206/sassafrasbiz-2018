@@ -157,6 +157,9 @@ h1.overlay {
   -ms-grid-column-span: 12;
   grid-column: 1 / -1;
   background-color: white;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
 }
 
 .logo-image {
