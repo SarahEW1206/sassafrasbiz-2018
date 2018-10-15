@@ -1,17 +1,17 @@
 //typewriter effect on marquee.
 var i = 0;
-var txt = 'You run your business. I\'ve got this. :) '; /* The text */
-var speed = 150; /* The speed/duration of the effect in milliseconds */
+var txt = 'Web development with a smile! :)'; /* The text */
+var speed = 100; /* The speed/duration of the effect in milliseconds */
 
-function typeWriter() {
+(function typeWriter() {
     if (i < txt.length) {
         document.getElementById("headline-text").innerHTML += txt.charAt(i);
         i++;
         setTimeout(typeWriter, speed);
     }
-};
+})();
 
-window.onload = typeWriter;
+// document.body.onload = typeWriter;
 
 
 
@@ -25,8 +25,6 @@ $(window).scroll(function () {
     var top1remove = h + (h / 4);
     var top2 = h + h + h + h - 300;
     var top2remove = h + h + h;
-
-    console.log(top);
 
     if ($(this).scrollTop() > top1) {
         $('.overlay1').addClass("scale-and-skew");
