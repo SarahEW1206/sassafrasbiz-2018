@@ -1,24 +1,21 @@
 var gulp = require("gulp");
 var sass = require("gulp-sass");
-var sourcemaps = require("gulp-sourcemaps");
-
-var sassOptions = {
-  errLogToConsole: true,
-  outputStyle: "expanded"
-};
 
 var sassSources = "./scss/**/*.scss";
 var sassOutput = "./css";
 
-gulp.task("sass", function() {
+function style() {
   return gulp
     .src(sassSources)
-    .pipe(sourcemaps.init())
-    .pipe(sass(sassOptions).on("error", sass.logError))
-    .pipe(sourcemaps.write("."))
+    .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest(sassOutput));
-});
+}
 
-gulp.task("default", function() {
-  gulp.watch(sassSources, ["sass"]);
-});
+function watch() {
+  gulp.watch(sassSources, style);
+}
+
+var build = gulp.parallel(style, watch);
+
+gulp.task(build);
+gulp.task("default", build);
