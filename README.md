@@ -1,3 +1,3 @@
 # sassafrasbiz-2018
 
-[View live site] (https://sassafrasbiz.com)
+[View live site](https://sassafrasbiz.com)
