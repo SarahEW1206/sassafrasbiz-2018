@@ -24,7 +24,8 @@ a {
 p {
   // font-family: "Heebo", sans-serif;
   font-family: "Muli", sans-serif;
-  font-size: 16px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
   // letter-spacing: 1px;
   font-weight: 400;
   color: #333333;
@@ -35,11 +36,12 @@ p {
 }
 
 h1 {
-  font-size: 1.3em;
+  font-size: 2em;
   font-family: "Passion One", sans-serif;
   font-weight: 700;
   margin: 0;
   padding: 15px;
+  text-align: left;
 }
 
 h2 {
@@ -368,11 +370,14 @@ h1.overlay {
 
 .round-headshot {
   width: 200px;
-  border-radius: 10px;
+  border-radius: 0% 53% 0% 56% / 0% 54% 0% 56%;
+  border: 6px solid yellow;
 }
 
 .content-2 p {
   width: 90%;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
 .content-2 h1 {
@@ -381,7 +386,8 @@ h1.overlay {
 }
 
 .content-2 li {
-  font-size: 16px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
   color: #333;
   padding-top: 10px;
   text-align: left;
@@ -611,9 +617,9 @@ h1.overlay {
 
 .clients > p {
   display: block;
-  width: 100%;
+  width: 90%;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
   color: white;
   font-weight: 100;
   letter-spacing: 2px;
